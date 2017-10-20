@@ -3,3 +3,4 @@
 *.dSYM
 *.log
 *.so
+*.out

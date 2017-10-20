@@ -12,8 +12,8 @@ int print_a_message(const char *msg)
 int uppercase(const char *msg)
 {
     int i = 0;
-    // BUG: \0 termination problems
-    for (i = 0; msg[i] != '\0'; i++)
+    size_t count = strlen(msg);
+    for (i = 0; i < count; i++)
     {
         printf("%c", toupper(msg[i]));
     }
@@ -26,9 +26,8 @@ int uppercase(const char *msg)
 int lowercase(const char *msg)
 {
     int i = 0;
-
-    // BUG: \0 termination problems
-    for (i = 0; msg[i] != '\0'; i++)
+    size_t count = strlen(msg);
+    for (i = 0; i < count; i++)
     {
         printf("%c", tolower(msg[i]));
     }
